@@ -8,11 +8,10 @@ http.createServer((req,res)=>{
             res.write(JSON.stringify(response));
             console.log("------");
             console.log(response)
-
             let data = JSON.stringify(response);
+            // console.log(data)
             fs.writeFileSync('wetherData.json', data);
             res.end();
-
             
         });
         

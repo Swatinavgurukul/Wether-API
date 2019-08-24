@@ -1,4 +1,4 @@
-const data = require('./wetherData.json');
+
 
 const fs = require('fs');
 
@@ -27,6 +27,7 @@ fs.readFile('./wetherData.json', 'utf8', function(err, contents) {
         lat: lat
 };
       let dataWether = JSON.stringify(wether);
+      console.log(dataWether)
       fs.writeFileSync('wetherParticularData.json', dataWether);
      
     // ... use the data object here ...
